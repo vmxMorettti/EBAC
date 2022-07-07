@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+div {
+    margin: 100px;
+    margin-bottom: 250px;
+}
+
+#triangulo {
+    float: left;
+    border-style: solid;
+    border-width: 60px 0px 60px 120px;
+    width: 60px;
+    border-color: transparent transparent transparent green;
+}
+
+.circulo {
+    float: left;
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#imagem {
+    background-image: url("../../../imgs/Starbucks-logo-3.jpg");
+
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+footer {
+   text-align: center;
+}
