@@ -1,5 +1,124 @@
+:root {
+    --primary:  rgb(0, 0, 200);
+    --secondary: rgb(153, 250, 253);
+    --text-color-1: rgb(1, 162, 255);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(var(--primary), var(--secondary));
+}
+
+#main-container {
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+    /* HEADER */
+
+header {
+    background-color: white;
+    padding: 20px;
+}
+
+    /* SECTION NAV */
+section {
+    display: flex;
+    padding: 20px;
+    background-color: rgb(228, 228, 228);
+}
+
+img {
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    width: 20%;
+    padding: 20px;
+}
+
+nav li {
+    margin-bottom: 5px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(0, 0, 125);
+}
+
+
+
+    /* SECTION ARTICLE */
+
+article {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+}
+
+article h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+article h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+article h3 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin: 10px 0;
+    padding-top: 10px;
+}
+
+article h4 {
+    font-size: 1.6rem;
+    color: var(--text-color-1);
+    margin: 10px 0;
+    padding-top: 10px;
+}
+
+p {
+    line-height: 1.4rem;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+
+    /* FOOOTER */
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+small {
+    color: rgb(150, 150, 150);
 }
