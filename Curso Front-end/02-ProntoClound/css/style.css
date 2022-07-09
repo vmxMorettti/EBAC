@@ -105,6 +105,10 @@ ol li {
     margin-bottom: 10px;
 }
 
+#tenho-interesse{
+    margin-top: 30px;
+}
+
 
     /* FOOOTER */
 
@@ -121,4 +125,18 @@ footer p {
 
 small {
     color: rgb(150, 150, 150);
+}
+
+@media (max-width: 450px) {
+    #main-container {
+        max-width: 100%;
+    }
+
+    section {
+       flex-direction: column; 
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
 }
