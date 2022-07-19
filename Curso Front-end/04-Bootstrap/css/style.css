@@ -1,0 +1,25 @@
+header {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+section {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    padding: 20px;
+}
+
+#contato {
+    background-color: rgb(210, 210, 210);
+}
+
+
+#produtos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    width: 20%;
+
+}
