@@ -1,81 +1,70 @@
-const form = document.querySelector("form");
-const name = document.querySelector("#name");
-const email = document.querySelector("#email");
-const telefone = document.querySelector("#telefone");
-const cep = document.querySelector("#cep")
-const cidade = document.querySelector("#cidade")
-const estado = document.querySelector("#estado")
+document.querySelector('form').addEventListener("click",
+    function (e) {
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    checkInputs();
-})
+        const ufSelect = document.querySelector("#uf");
+        const valueUF = ufSelect.value;
+        console.log(valueUF)
+        function validar(uf) {
 
-/* checar se o campo está vazio */
-function checkInputs() {
-    const nameValue = name.value;
-    const emailValue = email.value;
-    const telValue = telefone.value;
-    const cepValue = cep.value;
-    const cidadeValue = cidade.value;
-    const estadoValue = estado.value;
+            var er = /A[CLMP]|BA|CE|ES|M[AGST]|P[ABEIR]|R[JNORS]|S[CEP]|[GT]O/i;
+            return er.test(uf);
 
-    if (nameValue == "") {
-        setError(name, "Preencha este campo");
-    } else {
-        setSucess(name);
+        }
+        let ufSelected = validar(valueUF)
+        console.log(ufSelected)
+        if (ufSelected === true) {
+            document.querySelector('.errorUF').innerHTML = "";
+
+        } else {
+            document.querySelector('.errorUF').innerHTML = "Preencha uma unidade de UF válida, EX.: SP";
+        }
+
+
+
+    });
+
+
+document.querySelector('form').addEventListener("click", function (e) {
+    const camposEmail = document.querySelector('#email');
+    const capturaEmail = camposEmail.value;
+
+    function validaEmail() {
+        const ev = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i;
+        return ev.test(capturaEmail)
     }
-    
-    if (emailValue == "") {
-        setError(email, "Preencha este campo");
+    let capturaFuncaoValidaEmail = validaEmail(capturaEmail);
+    console.log(capturaFuncaoValidaEmail)
+    if (capturaFuncaoValidaEmail === true) {
+        document.querySelector('.errorEmail').innerHTML = "";
     } else {
-        setSucess(email);
+        document.querySelector('.errorEmail').innerHTML = "verefique se o email é válido! example@example.com";
     }
-        
-        
-    
-    if (telValue == "") {
-        setError(telefone, "Preencha este campo");
-    } else {
-        setSucess(telefone);
+
+
+
+    console.log(capturaFuncaoValidaEmail)
+});
+
+document.querySelector('form').addEventListener("click", function (e) {
+    const chaveCEP = this.querySelector('#cep');
+    const valorCEP = chaveCEP.value;
+
+    function validaCEP() {
+        const regexCEP = /^[0-9]{5}-[0-9]{3}$/;
+        return regexCEP.test(valorCEP)
     }
-    
-    if (cepValue == "") {
-        setError(cep, "Preencha este campo");
-    } else {
-        setSucess(cep);
+    let capturaFuncaoCEP = validaCEP(valorCEP)
+    console.log(capturaFuncaoCEP)
+    if (capturaFuncaoCEP === true) {
+        document.querySelector('.errorCEP').innerHTML = "";
+    }else {
+        document.querySelector('.errorCEP').innerHTML = "verefique se o cep é válido! (Formato aceito: XXXXX-XXX)";
     }
-    
-    if (cidadeValue == "") {
-        setError(cidade, "Preencha este campo");
-    } else {
-        setSucess(cidade);
-    }
-    
-    if (estadoValue == "") {
-        setError(estado, "Preencha este campo");
-    } else {
-        setSucess(estado);
-    }
-    
-    
-    console.log(nameValue)
-    console.log(emailValue)
-}
+});
 
-function setError(input, mensage) {
-    const div = input.parentElement;
-    const small = div.querySelector("small");
+document.querySelector("form")
+    .addEventListener('submit', e => {
+        //console.log("enviar o formulário")
 
-    input.className = "error";
-    small.innerText = mensage;
-}
-
-function setSucess(input) {
-    const div = input.parentElement;
-    const small = div.querySelector("small");
-
-    input.className = "sucess";
-    small.innerText = ""
-
-}
+        e.preventDefault();
+    })

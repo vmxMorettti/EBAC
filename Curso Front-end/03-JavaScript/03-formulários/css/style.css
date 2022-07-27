@@ -24,17 +24,10 @@ form div{
 
 input {
     padding: 5px;
+    
 }
 
 small {
     color:rgb(220, 0, 0);
-}
-
-
-.error {
-    border: 2px solid rgb(220, 0, 0);
-}
-
-.sucess {
-    border: 2px solid rgb(0, 220, 0);
+    
 }

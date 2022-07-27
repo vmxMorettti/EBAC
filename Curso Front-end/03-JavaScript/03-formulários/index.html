@@ -13,33 +13,33 @@
         <form>
             <div>
                 <label for="name">Nome Completo:</label>
-                <input type="text" name="name" id="name">
-                <small class="error_msg"></small>
+                <input type="text" name="name" id="name" required>
+                <small class="error"></small>
             </div>
             <div>
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email">
-                <small class="error_msg"></small>
+                <input type="email" name="email" id="email" required>
+                <small class="errorEmail"></small>
             </div>
             <div>
                 <label for="telefone">Telefone:</label>
-                <input type="tel" name="telefone" id="telefone">
-                <small class="error_msg"></small>
+                <input type="tel" name="telefone" id="telefone" required>
+                <small class="error"></small>
             </div>
             <div>
                 <label for="cep">CEP:</label>
-                <input type="text" name="cep" id="cep" placeholder="xxxxx-xxx">
-                <small class="error_msg"></small>
+                <input type="text" name="cep" id="cep" placeholder="xxxxx-xxx" required>
+                <small class="errorCEP"></small>
             </div>
             <div>
                 <label for="cidade">Cidade:</label>
-                <input type="text" name="cidade" id="cidade">
-                <small class="error_msg"></small>
+                <input type="text" name="cidade" id="cidade" required>
+                <small class="error"></small>
             </div>
             <div>
-                <label for="estado">Estado:</label>
-                <input type="text" name="estado" id="estado">
-                <small class="error_msg"></small>
+                <label for="estado">UF:</label>
+                <input type="text" name="estado" id="uf" placeholder="SP" required>
+                <small class="errorUF"></small>
             </div>
                 <button type="submit" class="btn">Enviar</button>
         </form>
