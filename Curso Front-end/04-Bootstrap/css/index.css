@@ -1,6 +1,10 @@
 header {
-    background-color: lightgray;
-    padding: 10px;
+    background-color: black;
+    padding: 20px;
+}
+
+header h1 {
+    color: white;
 }
 
 section {
