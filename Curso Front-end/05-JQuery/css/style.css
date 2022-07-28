@@ -76,7 +76,7 @@ a {
 	z-index: 999;
 	position: absolute;
 	left: 50%;
-	top: 105px;
+	top: 130px;
 	transform: translateX(-50%);
 }
 .navbar-dark .navbar-nav .nav-item {
@@ -737,4 +737,14 @@ a {
 		text-align: left;
 	} 
 
+}
+
+.invalid {
+	border: 2px solid rgb(240, 0, 0);
+}
+
+.text-muted {
+	color:  rgb(240, 0, 0) !important;
+	display: none;
+	
 }
