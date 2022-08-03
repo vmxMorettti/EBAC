@@ -4,6 +4,11 @@ const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const image = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');
+const { series, parallel } = require('gulp');
+const babel = require('gulp-babel');
+const browserSync = require('browser-sync').create();
+const reload = browserSync.reload
 
 
 function tarefasCSS(cb) {
@@ -13,7 +18,7 @@ function tarefasCSS(cb) {
         './vendor/owl/css/owl.css',
         './node_modules/@fortawesome/fontawesome-free/css/fontawesome.css',
         './src/css/style.css'
-    ])
+    ])       
         .pipe(concat('styles.css'))
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
@@ -28,6 +33,10 @@ function tarefasJS() {
         './vendor/jquery-mask/jquery.mask.js',
         './src/js/custom.js'
     ])
+        .pipe(babel({
+            comments: false,
+            presets: ['@babel/env']
+        }))
         .pipe(concat('scripts.js'))
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
@@ -51,7 +60,29 @@ function tarefasIMAGE() {
         .pipe(gulp.dest('./dist/images'))
 }
 
-exports.styles = tarefasCSS
-exports.scripts = tarefasJS
+function tarefasHTML(callback) {
+    
+    gulp.src('*.html')
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('./dist'))
+
+    return callback()
+}
+
+gulp.task('serve', function(){
+    browserSync.init({
+        server: {
+            baseDir: './dist'
+        }
+    })
+    
+    gulp.watch('./src/**/*').on('change', process)
+    gulp.watch('./src/**/*').on('change', reload)
+   
+})
+
+const process = series(tarefasHTML, tarefasCSS, tarefasJS)
+
 exports.imagem = tarefasIMAGE
+exports.default = process
 
