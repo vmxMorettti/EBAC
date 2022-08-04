@@ -1,0 +1,133 @@
+.footer {
+	text-align: center;
+    ul {
+        padding: 0px;
+        margin: 0px;
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+    }
+    .logo{
+        img {
+           max-width: 100%;
+           margin-top: 60px;
+           margin-bottom: 40px;
+       }
+
+    } 
+    .footer-menu {
+        margin-bottom: 40px;
+        ul {
+            li {
+               margin: 0px 15px;
+           }
+
+        } 
+        a {
+           font-size: 13px;
+           color: #7a7a7a;
+           text-transform: uppercase;
+           transition: all 0.5s;
+           &:hover {
+               color: #3a8bcd;
+               text-decoration: none;
+           }
+       }
+    }
+    .social-icons {
+        margin-bottom: 60px;
+        ul{
+            li {
+              margin: 0px 10px;
+          }
+        }
+        a {
+           width: 32px;
+           height: 32px;
+           color: #fff;
+           background-color: #aaa;
+           text-align: center;
+           display: inline-block;
+           line-height: 33px;
+           border-radius: 50%;
+           font-size: 13px;
+           transition: all 0.5s;
+           &:hover {
+              background-color: #3a8bcd;
+          }
+       }
+    }   
+}
+
+/* Sub Footer Style */
+.sub-footer {
+	border-top: 1px solid #eee;
+	text-align: center;
+    p {
+        font-size: 12px;
+        color: #7a7a7a;
+        line-height: 60px;
+    }
+    a {
+       color: #3a8bcd;
+       text-decoration: none;
+   }
+}
+
+/* About Us Style */
+.about-page {
+	margin-top: 50px;
+    margin-bottom: 80px;
+    .right-content{
+        h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        span {
+            display: inline-block;
+            margin-left: 8px;
+            a{
+                &:hover{
+                    i {
+                        background-color: #3a8bcd;
+                    }
+
+                } 
+                i {
+                   transition: all 0.5s;
+                   background-color: #aaa;
+                   width: 26px;
+                   height: 26px;
+                   display: inline-block;
+                   text-align: center;
+                   line-height: 26px;
+                   border-radius: 50%;
+                   color: #fff;
+                   font-size: 12px;
+                   margin-right: 5px;
+                }
+
+            } 
+        }
+        .share {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding: 15px 0px;
+        }
+        h6 {
+            font-size: 14px;
+            color: #4a4a4a;
+            font-weight: 400;
+        }
+        
+    } 
+    .left-image{
+        img {
+            max-width: 100%;
+        }
+
+    } 
+}

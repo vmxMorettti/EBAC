@@ -1,0 +1,75 @@
+.contact-page {
+	margin-top: 50px;
+    margin-bottom: 80px;
+    .right-content{
+        input {
+            height: 44px;
+            line-height: 44px;
+        }
+        textarea {
+           height: 200px;
+           max-height: 280px;
+        }
+        span {
+            display: inline-block;
+            margin-left: 8px;
+            a{
+                &:hover{
+                    i {
+                       background-color: #3a8bcd;
+                   }
+                }
+                i {
+                  transition: all 0.5s;
+                  background-color: #aaa;
+                  width: 26px;
+                  height: 26px;
+                  display: inline-block;
+                  text-align: center;
+                  line-height: 26px;
+                  border-radius: 50%;
+                  color: #fff;
+                  font-size: 12px;
+                  margin-right: 5px;
+               }
+
+            }
+        }
+        .share {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding: 15px 0px;
+        }
+        h6 {
+           font-size: 14px;
+           color: #4a4a4a;
+           font-weight: 400;
+        }
+        .button {
+            cursor: pointer;
+            background-color: #3a8bcd;
+            outline: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            display: inline-block;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 0.4px;
+            text-decoration: none;
+            transition: all 0.5s;
+            box-shadow: none;
+            border: none;
+        }
+
+    } 
+}
+.contact-page .right-content input,
+.contact-page .right-content textarea {
+	border-radius: 0px;
+	outline: none;
+	box-shadow: none;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
