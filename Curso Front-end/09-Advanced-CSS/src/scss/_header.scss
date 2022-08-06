@@ -6,14 +6,11 @@ header .container {
     flex-wrap: wrap;
 
     .hero {
-        align-items: flex-end;
-        background-image: url('../assets/images/banner-lance-me.png');
-        background-repeat: no-repeat;
-        background-position: top center;
-        height: 45rem;
-        display: flex;
-        padding-bottom: 4rem;
-        width: 100%;
+        
+        img {
+            max-width: 100%;
+            
+        }
 
         h1 {
             padding: 1rem 0 0;
